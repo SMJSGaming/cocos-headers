@@ -55,7 +55,7 @@ public:
     void swapBuffers();
 
 
-public:
+private:
 	CCPoint GetCCPoint(Windows::UI::Core::PointerEventArgs^ args);
 
 	void OnTextKeyDown(Object^ sender, Windows::UI::Xaml::Input::KeyRoutedEventArgs^ e); 
@@ -109,7 +109,7 @@ public:
 	void OnRendering();
     void OnSuspending();
 
-public:
+private:
 	Windows::Foundation::EventRegistrationToken m_eventToken;
 	Windows::Foundation::Point m_lastPoint;
 	bool m_lastPointValid;
@@ -136,9 +136,9 @@ public:
     */
 	static CCEGLView* sharedOpenGLView();
 
-public:
+protected:
 
-public:
+private:
     Platform::Agile<Windows::UI::Core::CoreWindow> m_window;
 	bool m_running;
 	bool m_initialized;

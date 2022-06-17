@@ -132,7 +132,7 @@ public:
      */
     virtual bool containPoint(float x, float y);
 
-public:
+protected:
     CCArray *m_pDecoDisplayList;
     //! Display render node.
     CCNode *m_pDisplayRenderNode;

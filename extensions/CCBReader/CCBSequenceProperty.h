@@ -12,7 +12,7 @@ NS_CC_EXT_BEGIN
  */
 class CCBSequenceProperty : public CCObject
 {
-public:
+private:
     std::string mName;
     int mType;
     CCArray *mKeyframes;

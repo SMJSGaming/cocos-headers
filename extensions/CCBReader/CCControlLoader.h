@@ -16,7 +16,7 @@ class CCControlLoader : public CCNodeLoader {
     public:
         virtual ~CCControlLoader() {};
 
-    public:
+    protected:
         CCB_PURE_VIRTUAL_NEW_AUTORELEASE_CREATECCNODE_METHOD(CCControl);
 
         virtual void onHandlePropTypeBlockCCControl(CCNode * pNode, CCNode * pParent, const char * pPropertyName, BlockCCControlData * pBlockCCControlData, CCBReader * pCCBReader);

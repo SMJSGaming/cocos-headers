@@ -89,7 +89,7 @@ public:
     void setAmplitudeRate(float amp);
     float getAmplitudeRate(void);
 
-public:
+protected:
     float m_elapsed;
     bool   m_bFirstTick;
 };
@@ -148,7 +148,7 @@ public:
      */
     static CCSequence* createWithTwoActions(CCFiniteTimeAction *pActionOne, CCFiniteTimeAction *pActionTwo);
 
-public:
+protected:
     CCFiniteTimeAction *m_pActions[2];
     float m_split;
     int m_last;
@@ -198,7 +198,7 @@ public:
 
     /** creates a CCRepeat action. Times is an unsigned integer between 1 and pow(2,30) */
     static CCRepeat* create(CCFiniteTimeAction *pAction, unsigned int times);
-public:
+protected:
     unsigned int m_uTimes;
     unsigned int m_uTotal;
     float m_fNextDt;
@@ -257,7 +257,7 @@ public:
 
     /** creates the action */
     static CCRepeatForever* create(CCActionInterval *pAction);
-public:
+protected:
     /** Inner action */
     CCActionInterval *m_pInnerAction;
 };
@@ -319,7 +319,7 @@ public:
      */
     static CCSpawn* createWithTwoActions(CCFiniteTimeAction *pAction1, CCFiniteTimeAction *pAction2);
 
-public:
+protected:
     CCFiniteTimeAction *m_pOne;
     CCFiniteTimeAction *m_pTwo;
 };
@@ -347,7 +347,7 @@ public:
     virtual void startWithTarget(CCNode *pTarget);
     virtual void update(float time);
     
-public:
+protected:
     float m_fDstAngleX;
     float m_fStartAngleX;
     float m_fDiffAngleX;
@@ -378,7 +378,7 @@ public:
     virtual void update(float time);
     virtual CCActionInterval* reverse(void);
     
-public:
+protected:
     float m_fAngleX;
     float m_fStartAngleX;
     float m_fAngleY;
@@ -408,7 +408,7 @@ public:
 public:
     /** creates the action */
     static CCMoveBy* create(float duration, const CCPoint& deltaPosition);
-public:
+protected:
     CCPoint m_positionDelta;
     CCPoint m_startPosition;
     CCPoint m_previousPosition;
@@ -434,7 +434,7 @@ public:
 public:
     /** creates the action */
     static CCMoveTo* create(float duration, const CCPoint& position);
-public:
+protected:
     CCPoint m_endPosition;
 };
 
@@ -461,7 +461,7 @@ public:
 
     /** creates the action */
     static CCSkewTo* create(float t, float sx, float sy);
-public:
+protected:
     float m_fSkewX;
     float m_fSkewY;
     float m_fStartSkewX;
@@ -507,7 +507,7 @@ public:
 public:
     /** creates the action */
     static CCJumpBy* create(float duration, const CCPoint& position, float height, unsigned int jumps);
-public:
+protected:
     CCPoint         m_startPosition;
     CCPoint         m_delta;
     float           m_height;
@@ -575,7 +575,7 @@ public:
      *  @endcode
      */
     static CCBezierBy* create(float t, const ccBezierConfig& c);
-public:
+protected:
     ccBezierConfig m_sConfig;
     CCPoint m_startPosition;
     CCPoint m_previousPosition;
@@ -611,7 +611,7 @@ public:
      */
     bool initWithDuration(float t, const ccBezierConfig &c);
     
-public:
+protected:
     ccBezierConfig m_sToConfig;
 };
 
@@ -641,7 +641,7 @@ public:
 
     /** creates the action with and X factor and a Y factor */
     static CCScaleTo* create(float duration, float sx, float sy);
-public:
+protected:
     float m_fScaleX;
     float m_fScaleY;
     float m_fStartScaleX;
@@ -697,7 +697,7 @@ public:
     virtual void startWithTarget(CCNode *pTarget);
     virtual void stop();
     
-public:
+protected:
     unsigned int m_nTimes;
     bool m_bOriginalState;
 };
@@ -760,7 +760,7 @@ public:
 public:
     /** creates an action with duration and opacity */
     static CCFadeTo* create(float duration, GLubyte opacity);
-public:
+protected:
     GLubyte m_toOpacity;
     GLubyte m_fromOpacity;
 };
@@ -785,7 +785,7 @@ public:
 public:
     /** creates an action with duration and color */
     static CCTintTo* create(float duration, GLubyte red, GLubyte green, GLubyte blue);
-public:
+protected:
     ccColor3B m_to;
     ccColor3B m_from;
 };
@@ -810,7 +810,7 @@ public:
 public:
     /** creates an action with duration and color */
     static CCTintBy* create(float duration, GLshort deltaRed, GLshort deltaGreen, GLshort deltaBlue);
-public:
+protected:
     GLshort m_deltaR;
     GLshort m_deltaG;
     GLshort m_deltaB;
@@ -874,7 +874,7 @@ public:
 public:
     /** creates the action */
     static CCReverseTime* create(CCFiniteTimeAction *pAction);
-public:
+protected:
     CCFiniteTimeAction *m_pOther;
 };
 
@@ -910,7 +910,7 @@ public:
     /** creates the action with an Animation and will restore the original frame when the animation is over */
     static CCAnimate* create(CCAnimation *pAnimation);
     CC_SYNTHESIZE_RETAIN(CCAnimation*, m_pAnimation, Animation)
-public:
+protected:
     std::vector<float>* m_pSplitTimes;
     int                m_nNextFrame;
     CCSpriteFrame*  m_pOrigFrame;
@@ -949,7 +949,7 @@ public:
 
     /** This is the target that the action will be forced to run with */
     CC_SYNTHESIZE_RETAIN(CCNode*, m_pForcedTarget, ForcedTarget);
-public:
+private:
     CCFiniteTimeAction* m_pAction;
 };
 

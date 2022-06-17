@@ -14,7 +14,7 @@ class CCControlButtonLoader : public CCControlLoader {
         virtual ~CCControlButtonLoader() {};
         CCB_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(CCControlButtonLoader, loader);
 
-    public:
+    protected:
         CCB_VIRTUAL_NEW_AUTORELEASE_CREATECCNODE_METHOD(CCControlButton);
 
         virtual void onHandlePropTypeCheck(CCNode * pNode, CCNode * pParent, const char * pPropertyName, bool pCheck, CCBReader * pCCBReader);

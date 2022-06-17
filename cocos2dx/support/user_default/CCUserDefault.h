@@ -112,7 +112,7 @@ public:
     const static std::string& getXMLFilePath();
     static bool isXMLFileExist();
 
-public:
+private:
     CCUserDefault();
     static bool createXMLFile();
     static void initXMLFilePath();

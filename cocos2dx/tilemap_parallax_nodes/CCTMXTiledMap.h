@@ -159,11 +159,11 @@ public:
     /** return properties dictionary for tile GID */
     CCDictionary* propertiesForGID(int GID);
 
-public:
+private:
     CCTMXLayer * parseLayer(CCTMXLayerInfo *layerInfo, CCTMXMapInfo *mapInfo);
     CCTMXTilesetInfo * tilesetForLayer(CCTMXLayerInfo *layerInfo, CCTMXMapInfo *mapInfo);
     void buildWithMapInfo(CCTMXMapInfo* mapInfo);
-public:
+protected:
     //! tile properties
     CCDictionary* m_pTileProperties;
 

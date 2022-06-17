@@ -52,7 +52,7 @@ public:
     /** creates the action with a range, whether or not to shake Z vertices, a grid size, and duration */
     static CCShakyTiles3D* create(float duration, const CCSize& gridSize, int nRange, bool bShakeZ);
 
-public:
+protected:
     int m_nRandrange;
     bool m_bShakeZ;
 };
@@ -74,7 +74,7 @@ public:
 
     /** creates the action with a range, whether of not to shatter Z vertices, a grid size and duration */
     static CCShatteredTiles3D* create(float duration, const CCSize& gridSize, int nRange, bool bShatterZ);
-public:
+protected:
     int m_nRandrange;
     bool m_bOnce;
     bool m_bShatterZ;
@@ -109,7 +109,7 @@ public:
 public:
     /** creates the action with a random seed, the grid size and the duration */
     static CCShuffleTiles* create(float duration, const CCSize& gridSize, unsigned int seed);
-public:
+protected:
     unsigned int m_nSeed;
     unsigned int m_nTilesCount;
     unsigned int* m_pTilesOrder;
@@ -208,7 +208,7 @@ public:
     /** creates the action with a random seed, the grid size and the duration */
     static CCTurnOffTiles* create(float duration, const CCSize& gridSize, unsigned int seed);
 
-public:
+protected:
     unsigned int    m_nSeed;
     unsigned int    m_nTilesCount;
     unsigned int*   m_pTilesOrder;
@@ -238,7 +238,7 @@ public:
 public:
     /** creates the action with a number of waves, the waves amplitude, the grid size and the duration */
     static CCWavesTiles3D* create(float duration, const CCSize& gridSize, unsigned int waves, float amplitude);
-public:
+protected:
     unsigned int m_nWaves;
     float m_fAmplitude;
     float m_fAmplitudeRate;
@@ -271,7 +271,7 @@ public:
 
     /** creates the action with the number of jumps, the sin amplitude, the grid size and the duration */
     static CCJumpTiles3D* create(float duration, const CCSize& gridSize, unsigned int numberOfJumps, float amplitude);
-public:
+protected:
     unsigned int m_nJumps;
     float m_fAmplitude;
     float m_fAmplitudeRate;
@@ -295,7 +295,7 @@ public:
 
     /** creates the action with the number of rows to split and the duration */
     static CCSplitRows* create(float duration, unsigned int nRows);
-public:
+protected:
     unsigned int m_nRows;
     CCSize m_winSize;
 };
@@ -317,7 +317,7 @@ public:
 public:
     /** creates the action with the number of columns to split and the duration */
     static CCSplitCols* create(float duration, unsigned int nCols);
-public:
+protected:
     unsigned int m_nCols;
     CCSize m_winSize;
 };

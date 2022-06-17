@@ -36,7 +36,7 @@ class UIScrollInterface
 public:
     virtual ~UIScrollInterface() {}
 
-public:
+protected:
     virtual void handlePressLogic(const CCPoint &touchPoint) = 0;
     virtual void handleMoveLogic(const CCPoint &touchPoint) = 0;
     virtual void handleReleaseLogic(const CCPoint &touchPoint) = 0;

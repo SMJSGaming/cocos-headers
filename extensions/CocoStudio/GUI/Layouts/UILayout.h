@@ -256,7 +256,7 @@ public:
     virtual void onExit();
     
     virtual bool hitTest(const CCPoint &pt);
-public:
+protected:
     //override "init" method of widget.
     virtual bool init();
         
@@ -280,7 +280,7 @@ public:
     void updateBackGroundImageColor();
     void updateBackGroundImageOpacity();
     void updateBackGroundImageRGBA();
-public:
+protected:
     bool _clippingEnabled;
     
     //background

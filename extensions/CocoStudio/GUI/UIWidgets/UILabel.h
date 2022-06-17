@@ -132,7 +132,7 @@ public:
     void setTextVerticalAlignment(CCVerticalTextAlignment alignment);
     
     CCVerticalTextAlignment getTextVerticalAlignment();
-public:
+protected:
     virtual bool init();
     virtual void initRenderer();
     virtual void onPressStateChangedToNormal();
@@ -147,7 +147,7 @@ public:
     void labelScaleChangedWithSize();
     virtual Widget* createCloneInstance();
     virtual void copySpecialProperties(Widget* model);
-public:
+protected:
     bool _touchScaleChangeEnabled;
     float _normalScaleValueX;
     float _normalScaleValueY;

@@ -48,7 +48,7 @@ is turned on in CCDirector using:
 */
 class CC_DLL CCTransitionPageTurn : public CCTransitionScene
 {
-public:
+protected:
     bool    m_bBack;
     
 public:
@@ -83,7 +83,7 @@ public:
      */
     virtual void onEnter();
 
-public:
+protected:
     virtual void sceneOrder();
 };
 

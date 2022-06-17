@@ -44,7 +44,7 @@ NS_CC_BEGIN
  */
 class CC_DLL CCDrawNode : public CCNode
 {
-public:
+protected:
     GLuint      m_uVao;
     GLuint      m_uVbo;
     
@@ -97,7 +97,7 @@ public:
      * @js NA
      */
     void listenBackToForeground(CCObject *obj);
-public:
+private:
     void ensureCapacity(unsigned int count);
     void render();
 };

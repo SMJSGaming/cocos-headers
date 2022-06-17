@@ -133,7 +133,7 @@ public:
      * Returns the "class name" of widget.
      */
     virtual std::string getDescription() const;
-public:
+protected:
     virtual void initRenderer();
     virtual void onSizeChanged();
     virtual void updateTextureColor();
@@ -143,7 +143,7 @@ public:
     void barRendererScaleChangedWithSize();
     virtual Widget* createCloneInstance();
     virtual void copySpecialProperties(Widget* model);
-public:
+protected:
     LoadingBarType _barType;
     int _percent;
     float _totalLength;

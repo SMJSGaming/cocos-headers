@@ -52,7 +52,7 @@ public:
     static CCArmatureDataManager *sharedArmatureDataManager();
 
     static void purge();
-public:
+private:
     CCArmatureDataManager(void);
     ~CCArmatureDataManager(void);
 
@@ -167,10 +167,10 @@ public:
     CCDictionary *getAnimationDatas() const;
     CCDictionary *getTextureDatas() const;
 
-public:
+protected:
     void addRelativeData(const char* configFilePath);
     CCRelativeData *getRelativeData(const char* configFilePath);
-public:
+private:
     /**
      *	@brief	save amature datas
      *  @key	std::string

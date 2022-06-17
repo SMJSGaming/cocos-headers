@@ -56,7 +56,7 @@ public:
     CC_PROPERTY_PASS_BY_REF(CCBaseData, m_sSkinData, SkinData);
     CC_PROPERTY(CCBone *, m_pBone, Bone);
 
-public:
+protected:
     CCArmature *m_pArmature;
     CCAffineTransform m_tSkinTransform;
     CC_SYNTHESIZE_READONLY(std::string, m_strDisplayName, DisplayName)

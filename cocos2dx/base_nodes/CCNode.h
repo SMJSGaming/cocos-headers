@@ -1397,7 +1397,7 @@ public:
         CCNode& operator=(const CCNode&);
     )
 
-public:
+private:
     /// lazy allocs
     void childrenAlloc(void);
     
@@ -1413,7 +1413,7 @@ public:
      */
     CCPoint convertToWindowSpace(const CCPoint& nodePoint);
 
-public:
+protected:
     float m_fRotationX;                 ///< rotation angle on x-axis
     float m_fRotationY;                 ///< rotation angle on y-axis
     
@@ -1532,7 +1532,7 @@ public:
     virtual void setOpacityModifyRGB(bool bValue) {CC_UNUSED_PARAM(bValue);};
     virtual bool isOpacityModifyRGB() { return false; };
 
-public:
+protected:
 	GLubyte		_displayedOpacity;
     GLubyte     _realOpacity;
 	ccColor3B	_displayedColor;

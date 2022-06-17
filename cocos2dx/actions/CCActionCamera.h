@@ -66,7 +66,7 @@ public:
     // super methods
     virtual void startWithTarget(CCNode *pTarget);
     virtual CCActionInterval * reverse();
-public:
+protected:
     float m_fCenterXOrig;
     float m_fCenterYOrig;
     float m_fCenterZOrig;
@@ -125,7 +125,7 @@ public:
     virtual void startWithTarget(CCNode *pTarget);
     virtual void update(float time);
 
-public:
+protected:
     float m_fRadius;
     float m_fDeltaRadius;
     float m_fAngleZ;

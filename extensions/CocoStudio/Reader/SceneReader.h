@@ -52,12 +52,12 @@ public:
 	cocos2d::CCNode* createNodeWithSceneFile(const char *pszFileName);
 	static void setTarget(CCObject *rec, SEL_CallFuncOD selector);
 	cocos2d::CCNode* getNodeByTag(int nTag);
-public:
+private:
     cocos2d::CCNode* createObject(const rapidjson::Value &root, cocos2d::CCNode* parent);
     void setPropertyFromJsonDict(const rapidjson::Value &root, cocos2d::CCNode *node);
     bool readJson(const char *pszFileName, rapidjson::Document &doc);
 	cocos2d::CCNode* nodeByTag(cocos2d::CCNode *pParent, int nTag);
-public:
+private:
 	static SceneReader* _sharedReader;
 	static CCObject*       _pListener;
 	static SEL_CallFuncOD  _pfnSelector;

@@ -102,7 +102,7 @@ public:
 	//! Simpler but slower overload.
 	PrettyWriter& String(const Ch* str) { return String(str, internal::StrLen(str)); }
 
-public:
+protected:
 	void PrettyPrefix(Type type) {
 		(void)type;
 		if (Base::level_stack_.GetSize() != 0) { // this value is not at root

@@ -24,7 +24,7 @@ public:
 	char* PutBegin() { return 0; }
 	size_t PutEnd(char*) { return 0; }
 
-public:
+private:
 	void Read() {
 		RAPIDJSON_ASSERT(fp_ != 0);
 		int c = fgetc(fp_);

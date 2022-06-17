@@ -85,7 +85,7 @@ public:
 
     inline void setAnimation(CCArmatureAnimation *animation) { m_pAnimation = animation; }
     inline CCArmatureAnimation *getAnimation() const { return m_pAnimation; }
-public:
+protected:
 
     /**
      * Update(float dt) will call this handler, you can handle your logic here
@@ -116,7 +116,7 @@ public:
      * Update display index and process the key frame event when arrived a key frame
      */
     virtual void arriveKeyFrame(CCFrameData *keyFrameData);
-public:
+protected:
     //! A weak reference to the current CCMovementBoneData. The data is in the data pool
     CC_SYNTHESIZE(CCMovementBoneData *, m_pMovementBoneData, MovementBoneData)
 

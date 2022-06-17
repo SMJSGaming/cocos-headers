@@ -168,7 +168,7 @@ public:
     virtual cpShape *getShapeList();
 #endif
 
-public:
+protected:
 
     /*
      * Used to create CCBone internal
@@ -189,7 +189,7 @@ public:
     CC_SYNTHESIZE(float, m_fVersion, Version);
 
     CC_SYNTHESIZE_READONLY(bool, m_bArmatureTransformDirty, ArmatureTransformDirty);
-public:
+protected:
     CCDictionary *m_pBoneDic;                    //! The dictionary of the bones, include all bones in the armature, no matter it is the direct bone or the indirect bone. It is different from m_pChindren.
 
     CCArray *m_pTopBoneList;

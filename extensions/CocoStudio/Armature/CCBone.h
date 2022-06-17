@@ -208,7 +208,7 @@ public:
      */
     CC_SYNTHESIZE(bool, m_bIgnoreMovementBoneData, IgnoreMovementBoneData)
 
-public:
+protected:
     virtual void applyParentTransform(CCBone *parent);
 
     CCTween *m_pTween;				//! Calculate tween effect

@@ -59,7 +59,7 @@ public:
     void draw();
 
     virtual CCTextureAtlas *getTexureAtlasWithTexture(CCTexture2D *texture);
-public:
+protected:
     CCTextureAtlas *m_pAtlas;
     CCDictionary *m_pTextureAtlasDic;
 };

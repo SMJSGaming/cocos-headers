@@ -75,7 +75,7 @@ public:
     bool getInsertText();
     void setDeleteBackward(bool deleteBackward);
     bool getDeleteBackward();
-public:
+protected:
     bool _maxLengthEnabled;
     int _maxLength;
     bool _passwordEnabled;
@@ -160,7 +160,7 @@ public:
     void setTextVerticalAlignment(CCVerticalTextAlignment alignment);
     /*=*/
     
-public:
+protected:
     virtual bool init();
     virtual void initRenderer();
     // event
@@ -175,7 +175,7 @@ public:
     void textfieldRendererScaleChangedWithSize();
     virtual Widget* createCloneInstance();
     virtual void copySpecialProperties(Widget* model);
-public:
+protected:
     UICCTextField* _textFieldRenderer;
 
     float _touchWidth;

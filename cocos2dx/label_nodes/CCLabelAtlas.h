@@ -96,7 +96,7 @@ public:
     virtual void draw();
 #endif
 
-public:
+protected:
     // string to render
     std::string m_sString;
     // the first char in the charmap

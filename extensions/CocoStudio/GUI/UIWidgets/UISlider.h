@@ -194,7 +194,7 @@ public:
      */
     virtual std::string getDescription() const;
 
-public:
+protected:
     virtual bool init();
     virtual void initRenderer();
     float getPercentWithBallPos(float location);
@@ -210,7 +210,7 @@ public:
     void progressBarRendererScaleChangedWithSize();
     virtual Widget* createCloneInstance();
     virtual void copySpecialProperties(Widget* model);
-public:
+protected:
     CCNode*  _barRenderer;
     CCNode* _progressBarRenderer;
     CCSize _progressBarTextureSize;

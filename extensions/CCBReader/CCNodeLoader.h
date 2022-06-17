@@ -56,7 +56,7 @@ class CCNodeLoader : public CCObject {
         virtual void parseProperties(CCNode * pNode, CCNode * pParent, CCBReader * pCCBReader);
         virtual CCDictionary* getCustomProperties();
     
-    public:
+    protected:
         CCB_VIRTUAL_NEW_AUTORELEASE_CREATECCNODE_METHOD(CCNode);
 
         virtual CCPoint parsePropTypePosition(CCNode * pNode, CCNode * pParent, CCBReader * pCCBReader, const char *pPropertyName);
@@ -119,7 +119,7 @@ class CCNodeLoader : public CCObject {
         virtual void onHandlePropTypeBlockCCControl(CCNode * pNode, CCNode * pParent, const char* pPropertyName, BlockCCControlData * pBlockCCControlData, CCBReader * pCCBReader);
         virtual void onHandlePropTypeCCBFile(CCNode * pNode, CCNode * pParent, const char* pPropertyName, CCNode * pCCBFileNode, CCBReader * pCCBReader);
 
-public:
+protected:
         CCDictionary* m_pCustomProperties;
 };
 

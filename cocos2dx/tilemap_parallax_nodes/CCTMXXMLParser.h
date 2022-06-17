@@ -218,9 +218,9 @@ public:
     inline void setCurrentString(const char *currentString){ m_sCurrentString = currentString; }
     inline const char* getTMXFileName(){ return m_sTMXFileName.c_str(); }
     inline void setTMXFileName(const char *fileName){ m_sTMXFileName = fileName; }
-public:
+private:
     void internalInit(const char* tmxFileName, const char* resourcePath);
-public:
+protected:
     //! tmx filename
     std::string m_sTMXFileName;
     // tmx resource path

@@ -32,7 +32,7 @@ NS_CC_BEGIN
 
 class CC_DLL CCComponent : public CCObject
 {
-public:
+protected:
     CCComponent(void);
 public:
     /**
@@ -63,7 +63,7 @@ public:
     void setOwner(CCNode *pOwner);
     CCNode* getOwner() const;
     
-public:
+protected:
     CCNode *m_pOwner;
     std::string m_strName;
     bool m_bEnabled;

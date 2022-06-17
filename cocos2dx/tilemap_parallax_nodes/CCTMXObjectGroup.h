@@ -71,7 +71,7 @@ public:
     It will return the 1st object found on the array for the given name.
     */
     CCDictionary* objectNamed(const char *objectName);
-public:    
+protected:    
     /** name of the group */
     std::string m_sGroupName;
 };

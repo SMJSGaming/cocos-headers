@@ -110,7 +110,7 @@ public:
 
     virtual int getCurrentFrameIndex();
 
-public:
+protected:
 
     virtual void gotoFrame(int frameIndex);
 
@@ -119,7 +119,7 @@ public:
      */
     virtual void updateHandler() {};
 
-public:
+protected:
     //! Scale the process speed
     CC_SYNTHESIZE(float, m_fProcessScale, ProcessScale);
 
@@ -144,7 +144,7 @@ public:
     //! The tween easing effect
     CC_SYNTHESIZE(CCTweenType, m_eTweenEasing, TweenEasing);
 
-public:
+protected:
     //! The durantion frame count will run
     int m_iDurationTween;
 

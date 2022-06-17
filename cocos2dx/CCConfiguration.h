@@ -136,12 +136,12 @@ public:
 	/** Loads a config file. If the keys are already present, then they are going to be replaced. Otherwise the new keys are added. */
 	void loadConfigFile( const char *filename );
 
-public:
+private:
     CCConfiguration(void);
     static CCConfiguration *s_gSharedConfiguration;
 	static std::string		s_sConfigfile;
     
-public:
+protected:
     GLint           m_nMaxTextureSize;
     GLint           m_nMaxModelviewStackDepth;
     bool            m_bSupportsPVRTC;

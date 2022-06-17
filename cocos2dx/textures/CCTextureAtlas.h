@@ -55,7 +55,7 @@ To render the quads using an interleaved vertex array list, you should modify th
 */
 class CC_DLL CCTextureAtlas : public CCObject 
 {
-public:
+protected:
     GLushort*           m_pIndices;
 #if CC_TEXTURE_ATLAS_USE_VAO
     GLuint              m_uVAOname;
@@ -217,7 +217,7 @@ public:
     /** specify if the array buffer of the VBO needs to be updated */
     inline void setDirty(bool bDirty) { m_bDirty = bDirty; }
 
-public:
+private:
     void setupIndices();
     void mapBuffers();
 #if CC_TEXTURE_ATLAS_USE_VAO

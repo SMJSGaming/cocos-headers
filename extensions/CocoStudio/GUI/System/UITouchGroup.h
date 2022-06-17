@@ -111,10 +111,10 @@ public:
      * @return UIRootWidget, "UIRootWidget" is the root widget of UILayer.
      */
     Widget* getRootWidget();
-public:
+protected:
     bool checkEventWidget(CCTouch* touch, CCEvent *pEvent);
     bool checkTouchEvent(Widget* root, CCTouch* touch, CCEvent* pEvent);
-public:
+protected:
     Widget* m_pRootWidget;
     CCPoint touchBeganedPoint;
     CCPoint touchMovedPoint;

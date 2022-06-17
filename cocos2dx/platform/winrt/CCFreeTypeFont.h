@@ -93,7 +93,7 @@ public:
         int* outHeight
     );
 
-public:
+private:
 	unsigned char* loadFont(const char *pFontName, unsigned long *size);
 
     unsigned char* CCFreeTypeFont::loadSystemFont(const char *pFontName, unsigned long *size);

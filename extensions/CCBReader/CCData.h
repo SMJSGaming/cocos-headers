@@ -20,7 +20,7 @@ public:
     unsigned char* getBytes();
     unsigned long getSize();
     
-public:
+private:
     unsigned char* m_pBytes;
     unsigned long m_nSize;
 };

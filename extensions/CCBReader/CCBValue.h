@@ -15,7 +15,7 @@ NS_CC_EXT_BEGIN
  */
 class ccColor3BWapper : public CCObject
 {
-public:
+private:
     ccColor3B color;
     
 public:
@@ -39,7 +39,7 @@ enum
  */
 class CCBValue : public CCObject
 {
-public:
+private:
     union 
     {
         int nValue;

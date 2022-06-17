@@ -257,7 +257,7 @@ public:
 	const char* GetParseError() const { return parseError_; }
 	size_t GetErrorOffset() const { return errorOffset_; }
 
-public:
+private:
 	// Parse object: { string : value, ... }
 	template<unsigned parseFlags, typename Stream, typename Handler>
 	void ParseObject(Stream& stream, Handler& handler) {

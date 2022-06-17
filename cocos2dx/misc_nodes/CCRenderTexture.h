@@ -164,10 +164,10 @@ public:
     bool isAutoDraw() const;
     void setAutoDraw(bool bAutoDraw);
 
-public:
+private:
     void beginWithClear(float r, float g, float b, float a, float depthValue, int stencilValue, GLbitfield flags);
 
-public:
+protected:
     GLuint       m_uFBO;
     GLuint       m_uDepthRenderBufffer;
     GLint        m_nOldFBO;

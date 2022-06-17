@@ -78,7 +78,7 @@ public:
     /** adds a CCGLProgram to the cache for a given name */
     void addProgram(CCGLProgram* program, const char* key);
 
-public:
+private:
     bool init();
     void loadDefaultShader(CCGLProgram *program, int type);
 

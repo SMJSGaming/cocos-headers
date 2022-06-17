@@ -43,7 +43,7 @@ public:
     RichElement(){};
     virtual ~RichElement(){};
     virtual bool init(int tag, const ccColor3B& color, GLubyte opacity);
-public:
+protected:
     RichElementType _type;
     int _tag;
     ccColor3B _color;
@@ -58,7 +58,7 @@ public:
     virtual ~RichElementText(){};
     virtual bool init(int tag, const ccColor3B& color, GLubyte opacity, const char* text, const char* fontName, float fontSize);
     static RichElementText* create(int tag, const ccColor3B& color, GLubyte opacity, const char* text, const char* fontName, float fontSize);
-public:
+protected:
     std::string _text;
     std::string _fontName;
     float _fontSize;
@@ -73,7 +73,7 @@ public:
     virtual ~RichElementImage(){};
     virtual bool init(int tag, const ccColor3B& color, GLubyte opacity, const char* filePath);
     static RichElementImage* create(int tag, const ccColor3B& color, GLubyte opacity, const char* filePath);
-public:
+protected:
     std::string _filePath;
     CCRect _textureRect;
     int _textureType;
@@ -87,7 +87,7 @@ public:
     virtual ~RichElementCustomNode(){CC_SAFE_RELEASE(_customNode);};
     virtual bool init(int tag, const ccColor3B& color, GLubyte opacity, CCNode* customNode);
     static RichElementCustomNode* create(int tag, const ccColor3B& color, GLubyte opacity, CCNode* customNode);
-public:
+protected:
     CCNode* _customNode;
     friend class RichText;
 };
@@ -108,7 +108,7 @@ public:
     virtual const CCSize& getContentSize() const;
     void formatText();
     virtual void ignoreContentAdaptWithSize(bool ignore);
-public:
+protected:
     virtual bool init();
     virtual void initRenderer();
     void pushToContainer(CCNode* renderer);
@@ -117,7 +117,7 @@ public:
     void handleCustomRenderer(CCNode* renderer);
     void formarRenderers();
     void addNewLine();
-public:
+protected:
     bool _formatTextDirty;
     CCArray* _richElements;
     std::vector<CCArray*> _elementRenders;

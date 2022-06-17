@@ -34,7 +34,7 @@ NS_CC_EXT_BEGIN
  */
 class CCInputDelegate : public CCTouchDelegate, public CCAccelerometerDelegate, public CCKeypadDelegate
 {
-public:
+protected:
     CCInputDelegate(void);
     virtual ~CCInputDelegate(void);
     
@@ -68,12 +68,12 @@ public:
     virtual void setTouchPriority(int priority);
     virtual int  getTouchPriority();
     
-public:   
+protected:   
     bool m_bTouchEnabled;
     bool m_bAccelerometerEnabled;
     bool m_bKeypadEnabled;
     
-public:
+private:
      int m_nTouchPriority;
      ccTouchesMode m_eTouchMode;
 };

@@ -37,7 +37,7 @@ class CCNode;
  */
 class CC_DLL CCComponentContainer
 {
-public:
+protected:
     CCComponentContainer(CCNode *pNode);
     
 public:
@@ -51,10 +51,10 @@ public:
 public:
     bool isEmpty() const;
     
-public:
+private:
     void alloc(void);
     
-public:
+private:
     CCDictionary *m_pComponents;        ///< Dictionary of components
     CCNode *m_pOwner;
     

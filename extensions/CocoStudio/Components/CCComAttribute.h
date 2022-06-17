@@ -34,7 +34,7 @@ NS_CC_EXT_BEGIN
 class CCComAttribute : public cocos2d::CCComponent
 {
 	DECLARE_CLASS_COMPONENT_INFO
-public:
+protected:
     /**
      *  @js ctor
      */
@@ -60,7 +60,7 @@ public:
    const char* getCString(const char *key, const char *def = NULL) const;
    
    bool parse(const std::string &jsonPath);
-public:
+private:
    cocos2d::CCDictionary *_dict;
    rapidjson::Document _doc;
 };

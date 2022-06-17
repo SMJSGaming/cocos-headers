@@ -81,7 +81,7 @@ public:
         return m_nId;
     }
 
-public:
+private:
     int m_nId;
     bool m_startPointCaptured;
     CCPoint m_startPoint;

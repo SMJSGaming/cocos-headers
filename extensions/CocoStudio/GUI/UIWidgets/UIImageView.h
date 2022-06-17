@@ -101,7 +101,7 @@ public:
     
     virtual const CCSize& getContentSize() const;
     virtual CCNode* getVirtualRenderer();
-public:
+protected:
     virtual void initRenderer();
     virtual void onSizeChanged();
     virtual void updateTextureColor();
@@ -112,7 +112,7 @@ public:
     void imageTextureScaleChangedWithSize();
     virtual Widget* createCloneInstance();
     virtual void copySpecialProperties(Widget* model);
-public:
+protected:
     bool _scale9Enabled;
     bool _prevIgnoreSize;
     CCRect _capInsets;

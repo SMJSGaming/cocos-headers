@@ -371,7 +371,7 @@ public:
         void updateScreenScale(CCSize);
         TextureQuality getLoadedTextureQuality(void) const;
 
-    public:
+    protected:
         CC_SYNTHESIZE_READONLY_NV(float, m_fScreenScaleFactor, ScreenScaleFactor);
         CC_SYNTHESIZE_READONLY_NV(float, m_fScreenScaleFactorMax, ScreenScaleFactorMax);
         CC_SYNTHESIZE_READONLY_NV(float, m_fScreenScaleFactorW, ScreenScaleFactorW);
@@ -432,7 +432,7 @@ public:
      */
     static CCDirector* sharedDirector(void);
 
-public:
+protected:
 
     void purgeDirector();
     RT_ADD(
@@ -444,7 +444,7 @@ public:
         CC_SYNTHESIZE_READONLY_NV(int, m_nSmoothFixCounter, SmoothFixCounter);  // not sure about this one either
     )
 
-public:
+protected:
     bool m_bPurgeDirecotorInNextLoop; // this flag will be set to true in end()
     
     void setNextScene(void);
@@ -456,7 +456,7 @@ public:
     
     /** calculates delta time since last time it was called */    
     void calculateDeltaTime();
-public:
+protected:
     /* The CCEGLView, where everything is rendered */
     CCEGLView    *m_pobOpenGLView;
 
@@ -559,7 +559,7 @@ public:
     virtual void startAnimation(void);
     virtual void stopAnimation();
 
-public:
+protected:
     bool m_bInvalid;
 };
 

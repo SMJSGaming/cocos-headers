@@ -190,7 +190,7 @@ public:
 	*
 	*/
 	virtual void setEasingParameter(std::vector<float> parameter);
-public:
+protected:
     /**
      * Gets the Easing Action of ActionFrame.
      *
@@ -199,7 +199,7 @@ public:
      * @return CCAction
      */
 	virtual CCActionInterval* getEasingAction(CCActionInterval* action);
-public:
+protected:
 	int m_frameType;	
 	int m_frameIndex;
 	float m_fTime;
@@ -246,7 +246,7 @@ public:
      * @return CCAction
      */
 	virtual CCActionInterval* getAction(float fDuration);
-public:
+protected:
 	CCPoint m_position;
 };
 /**
@@ -303,7 +303,7 @@ public:
      * @return CCAction
      */
 	virtual CCActionInterval* getAction(float fDuration);
-public:
+protected:
 	float m_scaleX;
 	float m_scaleY;
 };
@@ -400,7 +400,7 @@ public:
      * @return CCAction
      */
 	virtual CCActionInterval* getAction(float fDuration);
-public:
+protected:
 	float m_opacity;
 };
 /**
@@ -444,7 +444,7 @@ public:
      * @return CCAction
      */
 	virtual CCActionInterval* getAction(float fDuration);
-public:
+protected:
 	ccColor3B m_color;
 };
 

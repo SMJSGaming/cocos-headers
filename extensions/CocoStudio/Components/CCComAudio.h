@@ -34,7 +34,7 @@ NS_CC_EXT_BEGIN
 class CCComAudio : public cocos2d::CCComponent
 {
 	DECLARE_CLASS_COMPONENT_INFO
-public:
+protected:
     CCComAudio(void);
     virtual ~CCComAudio(void);
     
@@ -80,7 +80,7 @@ public:
    const char* getFile();
    void setLoop(bool bLoop);
    bool isLoop();
-public:
+private:
    std::string m_strFilePath;
    bool m_bLoop;
 };

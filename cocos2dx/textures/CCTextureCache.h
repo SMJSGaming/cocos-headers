@@ -55,12 +55,12 @@ class CCImage;
 */
 class CC_DLL CCTextureCache : public CCObject
 {
-public:
+protected:
     CCDictionary* m_pTextures;
     //pthread_mutex_t                *m_pDictLock;
 
 
-public:
+private:
     /// todo: void addImageWithAsyncObject(CCAsyncObject* async);
     void addImageAsyncCallBack(float dt);
 public:
@@ -224,12 +224,12 @@ public:
     static std::list<VolatileTexture*> textures;
     static bool isReloading;
     
-public:
+private:
     // find VolatileTexture by CCTexture2D*
     // if not found, create a new one
     static VolatileTexture* findVolotileTexture(CCTexture2D *tt);
 
-public:
+protected:
     CCTexture2D *texture;
     
     CCImage *uiImage;

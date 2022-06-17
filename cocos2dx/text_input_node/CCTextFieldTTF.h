@@ -143,7 +143,7 @@ public:
 public:
     virtual void setString(const char *text);
     virtual const char* getString(void);
-public:
+protected:
     std::string * m_pInputText;
 
     // place holder text property
@@ -151,15 +151,15 @@ public:
 public:
     virtual void setPlaceHolder(const char * text);
     virtual const char * getPlaceHolder(void);
-public:
+protected:
     std::string * m_pPlaceHolder;
     ccColor3B m_ColorSpaceHolder;
 public:
     virtual void setSecureTextEntry(bool value);
     virtual bool isSecureTextEntry();
-public:
+protected:
     bool m_bSecureTextEntry;
-public:
+protected:
 
     virtual void draw();
 
@@ -172,7 +172,7 @@ public:
     virtual void insertText(const char * text, int len);
     virtual void deleteBackward();
     virtual const char * getContentText();
-public:
+private:
     class LengthStack;
     LengthStack * m_pLens;
 };

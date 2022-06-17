@@ -46,10 +46,10 @@ public:
     unsigned int getWidth() const;
     unsigned int getHeight() const;
     
-public:
+private:
     bool loadTexture(const char* file);
 
-public:
+private:
     GLuint _name;
     unsigned int _width;
     unsigned int _height;

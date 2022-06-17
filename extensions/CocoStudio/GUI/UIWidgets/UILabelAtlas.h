@@ -104,7 +104,7 @@ public:
      */
     virtual std::string getDescription() const;
     
-public:
+protected:
     virtual void initRenderer();
     virtual void onSizeChanged();
     virtual void updateTextureColor();
@@ -113,7 +113,7 @@ public:
     void labelAtlasScaleChangedWithSize();
     virtual Widget* createCloneInstance();
     virtual void copySpecialProperties(Widget* model);
-public:
+protected:
     UICCLabelAtlas* _labelAtlasRenderer;
     std::string _stringValue;
     std::string _charMapFileName;

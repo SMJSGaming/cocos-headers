@@ -38,7 +38,7 @@ public:
     void setDelegate(CCAccelerometerDelegate* pDelegate);
     void setAccelerometerInterval(float interval);
     void update( double x,double y,double z,double timestamp );
-public:
+private:
     CCAcceleration m_obAccelerationValue;
     CCAccelerometerDelegate* m_pAccelDelegate;
 };

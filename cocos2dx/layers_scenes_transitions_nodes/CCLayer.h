@@ -188,7 +188,7 @@ public:
     inline CCTouchScriptHandlerEntry* getScriptTouchHandlerEntry() { return m_pScriptTouchHandlerEntry; };
     inline CCScriptHandlerEntry* getScriptKeypadHandlerEntry() { return m_pScriptKeypadHandlerEntry; };
     inline CCScriptHandlerEntry* getScriptAccelerateHandlerEntry() { return m_pScriptAccelerateHandlerEntry; };
-public:   
+protected:   
     bool m_bTouchEnabled;
     bool m_bAccelerometerEnabled;
     bool m_bKeypadEnabled;
@@ -197,7 +197,7 @@ public:
         bool m_bMouseEnabled;
     )
     
-public:
+private:
     // Script touch events handler
     CCTouchScriptHandlerEntry* m_pScriptTouchHandlerEntry;
     CCScriptHandlerEntry* m_pScriptKeypadHandlerEntry;
@@ -254,7 +254,7 @@ public:
     
     virtual void setOpacityModifyRGB(bool bValue) {CC_UNUSED_PARAM(bValue);}
     virtual bool isOpacityModifyRGB() { return false; }
-public:
+protected:
 	GLubyte		_displayedOpacity, _realOpacity;
 	ccColor3B	_displayedColor, _realColor;
 	bool		_cascadeOpacityEnabled, _cascadeColorEnabled;
@@ -274,7 +274,7 @@ class CC_DLL CCLayerColor : public CCLayerRGBA, public CCBlendProtocol
 , public CCGLBufferedNode
 #endif // EMSCRIPTEN
 {
-public:
+protected:
     ccVertex2F m_pSquareVertices[4];
     ccColor4F  m_pSquareColors[4];
 
@@ -320,7 +320,7 @@ public:
     virtual void setColor(const ccColor3B &color);
     virtual void setOpacity(GLubyte opacity);
 
-public:
+protected:
     virtual void updateColor();
 };
 
@@ -376,7 +376,7 @@ public:
     /** Whether or not the interpolation will be compressed in order to display all the colors of the gradient both in canonical and non canonical vectors
     Default: YES
     */
-public:
+protected:
     bool m_bCompressedInterpolation;
 public:
     virtual void setCompressedInterpolation(bool bCompressedInterpolation);
@@ -384,7 +384,7 @@ public:
     
     static CCLayerGradient* create();
 
-public:
+protected:
     virtual void updateColor();
 };
 
@@ -396,7 +396,7 @@ Features:
 */
 class CC_DLL CCLayerMultiplex : public CCLayer
 {
-public:
+protected:
     unsigned int m_nEnabledLayer;
     CCArray*     m_pLayers;
 public:

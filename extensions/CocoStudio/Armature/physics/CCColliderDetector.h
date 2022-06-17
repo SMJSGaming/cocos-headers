@@ -58,7 +58,7 @@ public:
 public:
     CCColliderFilter(unsigned short categoryBits = 0x0001, unsigned short maskBits = 0xFFFF, signed short groupIndex = 0);
     void updateShape(b2Fixture *fixture);
-public:
+protected:
     CC_SYNTHESIZE(unsigned short, m_CategoryBits, CategoryBits);
     CC_SYNTHESIZE(unsigned short, m_MaskBits, MaskBits);
     CC_SYNTHESIZE(signed short, m_GroupIndex, GroupIndex);
@@ -66,7 +66,7 @@ public:
 public:
     CCColliderFilter(uintptr_t collisionType = 0, uintptr_t group = 0);
     void updateShape(cpShape *shape);
-public:
+protected:
     CC_SYNTHESIZE(uintptr_t, m_CollisionType, CollisionType);
     CC_SYNTHESIZE(uintptr_t, m_Group, Group);
 #endif
@@ -96,11 +96,11 @@ public:
 #if ENABLE_PHYSICS_BOX2D_DETECT || ENABLE_PHYSICS_CHIPMUNK_DETECT
     void setColliderFilter(CCColliderFilter *filter);
     CCColliderFilter *getColliderFilter();
-public:
+private:
     CCColliderFilter *m_pFilter;
 #endif
 
-public:
+private:
     CCContourData *m_pContourData;
 };
 
@@ -137,10 +137,10 @@ public:
 #if ENABLE_PHYSICS_BOX2D_DETECT || ENABLE_PHYSICS_CHIPMUNK_DETECT
     virtual void setColliderFilter(CCColliderFilter *filter);
     virtual CCColliderFilter *getColliderFilter();
-public:
+protected:
     CCColliderFilter *m_pFilter;
 #endif
-public:
+protected:
     CCArray *m_pColliderBodyList;
 
     CC_SYNTHESIZE(CCBone *, m_pBone, Bone);
@@ -151,7 +151,7 @@ public:
     CC_PROPERTY(cpBody *, m_pBody, Body);
 #endif
 
-public:
+protected:
     bool m_bActive;
 };
 

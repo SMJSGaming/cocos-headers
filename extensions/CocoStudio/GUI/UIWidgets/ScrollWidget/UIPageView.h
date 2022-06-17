@@ -162,7 +162,7 @@ public:
     virtual std::string getDescription() const;
 
     virtual void onEnter();
-public:
+protected:
     virtual void addChild(CCNode * child);
     virtual void addChild(CCNode * child, int zOrder);
     virtual void addChild(CCNode* child, int zOrder, int tag);
@@ -194,7 +194,7 @@ public:
     virtual void copyClonedWidgetChildren(Widget* model);
     virtual void setClippingEnabled(bool enabled) {Layout::setClippingEnabled(enabled);};
     virtual void doLayout() {if (!_doLayoutDirty){return;} _doLayoutDirty = false;};
-public:
+protected:
     int _curPageIdx;
     CCArray* _pages;
     PVTouchDir _touchMoveDir;

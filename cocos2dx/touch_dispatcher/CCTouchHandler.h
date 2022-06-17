@@ -68,7 +68,7 @@ public:
     /** allocates a TouchHandler with a delegate and a priority */
     static CCTouchHandler* handlerWithDelegate(CCTouchDelegate *pDelegate, int nPriority);
 
-public:
+protected:
     CCTouchDelegate *m_pDelegate;
     int m_nPriority;
     int m_nEnabledSelectors;
@@ -116,7 +116,7 @@ public:
     /** allocates a TargetedTouchHandler with a delegate, a priority and whether or not it swallows touches or not */
     static CCTargetedTouchHandler* handlerWithDelegate(CCTouchDelegate *pDelegate, int nPriority, bool bSwallow);
 
-public:
+protected:
     bool m_bSwallowsTouches;
     CCSet *m_pClaimedTouches;
 };
