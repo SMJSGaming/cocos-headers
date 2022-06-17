@@ -79,7 +79,7 @@ public:
         return m_startupScriptFilename;
     }
 
-protected:
+public:
     LARGE_INTEGER       m_nAnimationInterval;
     std::string         m_resourceRootPath;
     std::string         m_startupScriptFilename;

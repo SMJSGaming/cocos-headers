@@ -61,10 +61,10 @@ public:
 	virtual void openKeyboard();
 	virtual void closeKeyboard();
 	virtual void onEnter(void);
-private:
+public:
 	Platform::String^ stringToPlatformString(std::string strSrc);
 	std::string PlatformStringTostring(Platform::String^ strSrc);
-private:
+public:
 
 	CCLabelTTF* m_pLabel;
 	CCLabelTTF* m_pLabelPlaceHolder;

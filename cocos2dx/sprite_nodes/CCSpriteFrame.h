@@ -147,7 +147,7 @@ public:
     bool initWithTextureFilename(const char* filename, const CCRect& rect, bool rotated, const CCPoint& offset, const CCSize& originalSize);
 
 
-protected:
+public:
     CCPoint m_obOffset;
     CCSize m_obOriginalSize;
     CCRect m_obRectInPixels;

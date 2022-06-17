@@ -118,11 +118,11 @@ It's new in cocos2d-x since v0.99.5
  If you need protected or private, please declare.
  */
 #define CC_PROPERTY_READONLY(varType, varName, funName)\
-protected: varType varName;\
+public: varType varName;\
 public: virtual varType get##funName(void);
 
 #define CC_PROPERTY_READONLY_PASS_BY_REF(varType, varName, funName)\
-protected: varType varName;\
+public: varType varName;\
 public: virtual const varType& get##funName(void);
 
 /** CC_PROPERTY is used to declare a protected variable.
@@ -136,12 +136,12 @@ public: virtual const varType& get##funName(void);
  If you need protected or private, please declare.
  */
 #define CC_PROPERTY(varType, varName, funName)\
-protected: varType varName;\
+public: varType varName;\
 public: virtual varType get##funName(void);\
 public: virtual void set##funName(varType var);
 
 #define CC_PROPERTY_PASS_BY_REF(varType, varName, funName)\
-protected: varType varName;\
+public: varType varName;\
 public: virtual const varType& get##funName(void);\
 public: virtual void set##funName(const varType& var);
 
@@ -155,11 +155,11 @@ public: virtual void set##funName(const varType& var);
  If you need protected or private, please declare.
  */
 #define CC_SYNTHESIZE_READONLY(varType, varName, funName)\
-protected: varType varName;\
+public: varType varName;\
 public: virtual varType get##funName(void) const { return varName; }
 
 #define CC_SYNTHESIZE_READONLY_PASS_BY_REF(varType, varName, funName)\
-protected: varType varName;\
+public: varType varName;\
 public: virtual const varType& get##funName(void) const { return varName; }
 
 /** CC_SYNTHESIZE is used to declare a protected variable.
@@ -173,17 +173,17 @@ public: virtual const varType& get##funName(void) const { return varName; }
  If you need protected or private, please declare.
  */
 #define CC_SYNTHESIZE(varType, varName, funName)\
-protected: varType varName;\
+public: varType varName;\
 public: virtual varType get##funName(void) const { return varName; }\
 public: virtual void set##funName(varType var){ varName = var; }
 
 #define CC_SYNTHESIZE_PASS_BY_REF(varType, varName, funName)\
-protected: varType varName;\
+public: varType varName;\
 public: virtual const varType& get##funName(void) const { return varName; }\
 public: virtual void set##funName(const varType& var){ varName = var; }
 
 #define CC_SYNTHESIZE_RETAIN(varType, varName, funName)    \
-private: varType varName; \
+public: varType varName; \
 public: virtual varType get##funName(void) const { return varName; } \
 public: virtual void set##funName(varType var)   \
 { \
@@ -236,12 +236,12 @@ public: virtual void set##funName(varType var)   \
 #if defined(__GNUC__) && ((__GNUC__ >= 5) || ((__GNUG__ == 4) && (__GNUC_MINOR__ >= 4))) \
     || (defined(__clang__) && (__clang_major__ >= 3))
 #define CC_DISABLE_COPY(Class) \
-private: \
+public: \
     Class(const Class &) = delete; \
     Class &operator =(const Class &) = delete;
 #else
 #define CC_DISABLE_COPY(Class) \
-private: \
+public: \
     Class(const Class &); \
     Class &operator =(const Class &);
 #endif
@@ -293,14 +293,14 @@ private: \
 * CC_PROPERTY, but getters and setters are not virtual functions.
 */
 #define CC_SYNTHESIZE_NV(varType, varName, funName)\
-protected: varType varName;\
+public: varType varName;\
 public: varType get##funName(void) const { return varName; }\
 public: void set##funName(varType var){ varName = var; }
 
 /** 
 */
 #define CC_SYNTHESIZE_READONLY_NV(varType, varName, funName)\
-protected: varType varName;\
+public: varType varName;\
 public: varType get##funName(void) const { return varName; }\
 
 #endif // __CC_PLATFORM_MACROS_H__

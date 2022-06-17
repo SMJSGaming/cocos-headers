@@ -234,7 +234,7 @@ public:
     virtual void ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent);
     virtual void ccTouchCancelled(CCTouch *pTouch, CCEvent *pEvent);
 
-protected:
+public:
 
     CCTableViewCell *m_pTouchedCell;
     /**

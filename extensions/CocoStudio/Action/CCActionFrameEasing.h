@@ -59,7 +59,7 @@ enum FrameEasingType
 */
 class ActionFrameEasing:public cocos2d::CCObject
 {
-protected:
+public:
 	FrameEasingType m_type;
 	float m_fValue;
 public:

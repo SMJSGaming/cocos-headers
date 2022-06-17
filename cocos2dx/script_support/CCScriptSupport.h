@@ -68,7 +68,7 @@ public:
         return m_nEntryId;
     }
     
-protected:
+public:
     CCScriptHandlerEntry(int nHandler)
     : m_nHandler(nHandler)
     {
@@ -111,7 +111,7 @@ public:
         return m_bMarkedForDeletion;
     }
     
-private:
+public:
     CCSchedulerScriptHandlerEntry(int nHandler)
     : CCScriptHandlerEntry(nHandler)
     , m_pTimer(NULL)
@@ -149,7 +149,7 @@ public:
         return m_bSwallowsTouches;
     }
     
-private:
+public:
     CCTouchScriptHandlerEntry(int nHandler)
     : CCScriptHandlerEntry(nHandler)
     , m_bIsMultiTouches(false)
@@ -281,7 +281,7 @@ public:
     static CCScriptEngineManager* sharedManager(void);
     static void purgeSharedManager(void);
     
-private:
+public:
     CCScriptEngineManager(void)
     : m_pScriptEngine(NULL)
     {

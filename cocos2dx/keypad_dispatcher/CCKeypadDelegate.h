@@ -70,7 +70,7 @@ public:
     /** allocates a CCKeypadHandler with a delegate */
     static CCKeypadHandler* handlerWithDelegate(CCKeypadDelegate *pDelegate);
 
-protected:
+public:
     CCKeypadDelegate* m_pDelegate;
 };
 

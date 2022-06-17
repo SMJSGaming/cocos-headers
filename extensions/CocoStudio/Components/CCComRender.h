@@ -55,9 +55,9 @@ public:
 
    static CCComRender* create(cocos2d::CCNode *pNode, const char *comName);
    static CCComRender* create(void);
-private:
+public:
    bool readJson(const char *pszFileName, rapidjson::Document &doc);
-private:
+public:
    cocos2d::CCNode *m_pRender;
 };
 

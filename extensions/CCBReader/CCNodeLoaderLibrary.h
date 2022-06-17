@@ -15,7 +15,7 @@ typedef std::pair<std::string, CCNodeLoader *> CCNodeLoaderMapEntry;
  *  @lua NA
  */
 class CCNodeLoaderLibrary : public CCObject {
-    private:
+    public:
         CCNodeLoaderMap mCCNodeLoaders;
 
     public:

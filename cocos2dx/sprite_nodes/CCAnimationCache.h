@@ -100,10 +100,10 @@ public:
 
     bool init(void);
 
-private:
+public:
     void parseVersion1(CCDictionary* animations);
     void parseVersion2(CCDictionary* animations);
-private:
+public:
     CCDictionary* m_pAnimations;
     static CCAnimationCache* s_pSharedAnimationCache;
 };

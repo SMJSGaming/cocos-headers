@@ -13,7 +13,7 @@ NS_CC_EXT_BEGIN
  */
 class CCBSequence : public CCObject
 {
-private:
+public:
     float mDuration;
     std::string mName;
     int mSequenceId;

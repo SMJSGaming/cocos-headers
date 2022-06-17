@@ -72,9 +72,9 @@ public:
 	void removeArmatureMovementCallBack(CCArmature *pAr, CCObject *pTarget, SEL_MovementEventCallFunc mecf);
 	void removeArmatureAllMovementCallBack(CCArmature *pAr);
 	void removeAllArmatureMovementCallBack();
-private:
+public:
     void alloc(void);
-private:
+public:
     CCDictionary *_eventTriggers;
     static TriggerMng *_sharedTriggerMng;
 	CCDictionary *_triggerObjs;

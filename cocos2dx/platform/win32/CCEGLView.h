@@ -55,7 +55,7 @@ public:
     void setMenuResource(LPCWSTR menu);
     void setWndProc(CUSTOM_WND_PROC proc);
 
-protected:
+public:
     RT_REMOVE(  virtual bool Create();  )
 public:
     bool initGL();
@@ -101,7 +101,7 @@ public:
         GLFWwindow* getWindow(void) const;
     )
 
-protected:
+public:
 	static CCEGLView* s_pEglView;
     bool m_bCaptured;
     RT_REMOVE(

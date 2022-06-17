@@ -144,7 +144,7 @@ NS_CC_EXT_BEGIN
 
 class CCBFile : public CCNode
 {
-private:
+public:
     CCNode *mCCBFileNode;
     
 public:
@@ -171,7 +171,7 @@ class CCBKeyframe;
  */
 class CCBReader : public CCObject 
 {
-private:
+public:
     
     CCData *mData;
     unsigned char *mBytes;
@@ -415,7 +415,7 @@ public:
     void addOwnerOutletName(std::string name);
     void addOwnerOutletNode(CCNode *node);
 
-private:
+public:
     void cleanUpNodeGraph(CCNode *pNode);
     bool readSequences();
     CCBKeyframe* readKeyframe(int type);

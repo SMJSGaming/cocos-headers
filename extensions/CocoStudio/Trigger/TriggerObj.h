@@ -35,7 +35,7 @@ NS_CC_EXT_BEGIN
 
 class BaseTriggerCondition : public CCObject
 {
-protected:
+public:
     BaseTriggerCondition(void);
 public:
 	virtual ~BaseTriggerCondition(void);
@@ -47,7 +47,7 @@ public:
 
 class BaseTriggerAction : public CCObject
 {
-protected:
+public:
     BaseTriggerAction(void);
 public:
 	virtual ~BaseTriggerAction(void);
@@ -74,7 +74,7 @@ public:
 	void setEnable(bool bEnable);
 	std::vector<int>& getEvents();
   
-private:
+public:
     CCArray *_cons;
     CCArray *_acts;
 	unsigned int _id;

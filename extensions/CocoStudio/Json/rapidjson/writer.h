@@ -89,7 +89,7 @@ public:
 	//! Simpler but slower overload.
 	Writer& String(const Ch* str) { return String(str, internal::StrLen(str)); }
 
-protected:
+public:
 	//! Information for each nested level
 	struct Level {
 		Level(bool inArray_) : inArray(inArray_), valueCount(0) {}
@@ -227,7 +227,7 @@ protected:
 	Stream& stream_;
 	internal::Stack<Allocator> level_stack_;
 
-private:
+public:
 	// Prohibit assignment for VC C4512 warning
 	Writer& operator=(const Writer& w);
 };

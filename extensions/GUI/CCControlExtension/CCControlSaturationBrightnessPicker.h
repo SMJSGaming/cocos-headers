@@ -47,9 +47,9 @@ NS_CC_EXT_BEGIN
 
 class CCControlSaturationBrightnessPicker : public CCControl
 {
-    /** Contains the receiver¡¯s current saturation value. */
+    /** Contains the receiverï¿½ï¿½s current saturation value. */
     CC_SYNTHESIZE_READONLY(float, m_saturation, Saturation);
-    /** Contains the receiver¡¯s current brightness value. */
+    /** Contains the receiverï¿½ï¿½s current brightness value. */
     CC_SYNTHESIZE_READONLY(float, m_brightness, Brightness);
 
     //not sure if these need to be there actually. I suppose someone might want to access the sprite?
@@ -59,7 +59,7 @@ class CCControlSaturationBrightnessPicker : public CCControl
     CC_SYNTHESIZE_READONLY(CCSprite*, m_slider, Slider);
     CC_SYNTHESIZE_READONLY(CCPoint, m_startPos, StartPos);
 
-protected:
+public:
     int         boxPos;
     int         boxSize;
     
@@ -74,7 +74,7 @@ public:
     virtual void updateWithHSV(HSV hsv);
     virtual void updateDraggerWithHSV(HSV hsv);
 
-protected:    
+public:    
     void updateSliderPosition(CCPoint location);
     bool checkSliderPosition(CCPoint location);
 

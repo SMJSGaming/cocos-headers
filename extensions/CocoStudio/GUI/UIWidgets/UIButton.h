@@ -171,7 +171,7 @@ public:
     void setTitleFontName(const char* fontName);
     const char* getTitleFontName() const;
 
-protected:
+public:
     virtual bool init();
     virtual void initRenderer();
     virtual void onPressStateChangedToNormal();
@@ -188,7 +188,7 @@ protected:
     void disabledTextureScaleChangedWithSize();
     virtual Widget* createCloneInstance();
     virtual void copySpecialProperties(Widget* model);
-protected:
+public:
     CCNode* _buttonNormalRenderer;
     CCNode* _buttonClickedRenderer;
     CCNode* _buttonDisableRenderer;

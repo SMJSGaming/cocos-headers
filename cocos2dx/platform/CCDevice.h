@@ -10,7 +10,7 @@ NS_CC_BEGIN
  */
 class CC_DLL CCDevice
 {
-private:
+public:
     CCDevice();
 public:
     /**

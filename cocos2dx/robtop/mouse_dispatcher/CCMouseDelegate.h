@@ -41,7 +41,7 @@ RT_ADD(
 
 		void setDelegate(CCMouseDelegate* pDelegate);
 
-	protected:
+	public:
 		CCMouseDelegate* m_pDelegate;
 	};
 

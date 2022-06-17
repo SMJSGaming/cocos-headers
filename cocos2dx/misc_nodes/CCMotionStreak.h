@@ -105,10 +105,10 @@ public:
     { 
         m_bStartingPositionInitialized = bStartingPositionInitialized; 
     }
-protected:
+public:
     bool m_bFastMode;
     bool m_bStartingPositionInitialized;
-private:
+public:
     /** texture used for the motion streak */
     CCTexture2D* m_pTexture;
     ccBlendFunc m_tBlendFunc;

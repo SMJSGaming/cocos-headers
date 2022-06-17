@@ -48,7 +48,7 @@ public:
     void addSpriteFrameFromFile(const char *plistPath, const char *imagePath);
 
 
-private:
+public:
     CCSpriteFrameCacheHelper();
     ~CCSpriteFrameCacheHelper();
 

@@ -214,7 +214,7 @@ public:
     virtual void addChild(CCNode * child, int zOrder);
     virtual void addChild(CCNode * child);
     void setTouchEnabled(bool e);
-private:
+public:
     /**
      * Relocates the container at the proper offset, in bounds of max/min offsets.
      *
@@ -250,7 +250,7 @@ private:
      */
     void handleZoom();
 
-protected:
+public:
     CCRect getViewRect();
     
     /**
@@ -344,7 +344,7 @@ public:
     void registerScriptHandler(int nFunID,int nScriptEventType);
     void unregisterScriptHandler(int nScriptEventType);
     int  getScriptHandler(int nScriptEventType);
-private:
+public:
     std::map<int,int> m_mapScriptHandler;
 };
 

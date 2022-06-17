@@ -39,7 +39,7 @@ public:
     virtual ~ScrollInnerContainer();
     static ScrollInnerContainer* create();
     virtual const CCSize& getLayoutSize();
-protected:
+public:
 };
 
 enum SCROLLVIEW_DIR
@@ -344,7 +344,7 @@ public:
     virtual std::string getDescription() const;
     
     virtual void onEnter();
-protected:
+public:
     virtual bool init();
     virtual void initRenderer();
     void moveChildren(float offsetX, float offsetY);
@@ -384,7 +384,7 @@ protected:
     virtual void copyClonedWidgetChildren(Widget* model);
     virtual void setClippingEnabled(bool able) {Layout::setClippingEnabled(able);};
     virtual void doLayout();
-protected:
+public:
     ScrollInnerContainer* _innerContainer;
     
     SCROLLVIEW_DIR _direction;

@@ -50,7 +50,7 @@ typedef struct _ccHSVValue
     float h, s, v;
     GLubyte absoluteSaturation;
     GLubyte absoluteBrightness;
-    private: unsigned char __pad[2];
+    public: unsigned char __pad[2];
 } ccHSVValue;
 )
 

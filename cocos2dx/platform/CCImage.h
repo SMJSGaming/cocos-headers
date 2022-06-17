@@ -176,7 +176,7 @@ public:
     CC_SYNTHESIZE_READONLY_NV(unsigned short,   m_nHeight,      Height);
     CC_SYNTHESIZE_READONLY_NV(int,     m_nBitsPerComponent,   BitsPerComponent);
 
-protected:
+public:
     bool _initWithJpgData(void *pData, int nDatalen);
     bool _initWithPngData(void *pData, int nDatalen);
     bool _initWithTiffData(void *pData, int nDataLen);
@@ -195,7 +195,7 @@ protected:
     CCFreeTypeFont* m_ft;
 #endif
 
-private:
+public:
     // noncopyable
     CCImage(const CCImage&    rImg);
     CCImage & operator=(const CCImage&);

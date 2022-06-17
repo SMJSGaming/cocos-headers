@@ -63,7 +63,7 @@ using the camera.
 */
 class CC_DLL CCCamera : public CCObject
 {
-protected:
+public:
     float m_fEyeX;
     float m_fEyeY;
     float m_fEyeZ;
@@ -133,7 +133,7 @@ public:
     /** returns the Z eye */
     static float getZEye();
 
-private:
+public:
     DISALLOW_COPY_AND_ASSIGN(CCCamera);
 };
 

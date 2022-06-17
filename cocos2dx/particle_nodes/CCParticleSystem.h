@@ -174,7 +174,7 @@ emitter.startSpin = 0;
 */
 class CC_DLL CCParticleSystem : public CCNode, public CCTextureProtocol
 {    
-protected:
+public:
     std::string m_sPlistFile;
     //! time elapsed since the start of the system (in seconds)
     float m_fElapsed;
@@ -356,7 +356,7 @@ public:
     By default it is false.
     @since v0.8
     */
-protected:
+public:
     bool m_bIsAutoRemoveOnFinish;
 public:
     virtual bool isAutoRemoveOnFinish();
@@ -429,7 +429,7 @@ public:
     virtual void update(float dt);
     virtual void updateWithNoTime(void);
 
-protected:
+public:
     virtual void updateBlendFunc();
 };
 

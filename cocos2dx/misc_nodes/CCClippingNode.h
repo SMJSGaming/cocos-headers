@@ -40,7 +40,7 @@ NS_CC_BEGIN
  */
 class CC_DLL CCClippingNode : public CCNode
 {
-protected:
+public:
     CCNode* m_pStencil;
     GLfloat m_fAlphaThreshold;
     bool    m_bInverted;
@@ -112,7 +112,7 @@ public:
     bool isInverted() const;
     void setInverted(bool bInverted);
     
-protected:
+public:
     CCClippingNode();
 };
 

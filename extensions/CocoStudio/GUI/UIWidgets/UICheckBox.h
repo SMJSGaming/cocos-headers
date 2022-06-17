@@ -158,7 +158,7 @@ public:
      */
     virtual std::string getDescription() const;
 
-protected:
+public:
     virtual bool init();
     virtual void initRenderer();
     virtual void onPressStateChangedToNormal();
@@ -179,7 +179,7 @@ protected:
     void frontCrossDisabledTextureScaleChangedWithSize();
     virtual Widget* createCloneInstance();
     virtual void copySpecialProperties(Widget* model);
-protected:
+public:
     CCSprite* _backGroundBoxRenderer;
     CCSprite* _backGroundSelectedBoxRenderer;
     CCSprite* _frontCrossRenderer;

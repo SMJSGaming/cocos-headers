@@ -201,14 +201,14 @@ public:
         void incrementForcePrio(int priority);
         void decrementForcePrio(int priority);
     )
-protected:
+public:
     void forceRemoveDelegate(CCTouchDelegate *pDelegate);
     void forceAddHandler(CCTouchHandler *pHandler, CCArray* pArray);
     void forceRemoveAllDelegates(void);
     void rearrangeHandlers(CCArray* pArray);
     CCTouchHandler* findHandler(CCArray* pArray, CCTouchDelegate *pDelegate);
 
-protected:
+public:
      CCArray* m_pTargetedHandlers;
      CCArray* m_pStandardHandlers;
 

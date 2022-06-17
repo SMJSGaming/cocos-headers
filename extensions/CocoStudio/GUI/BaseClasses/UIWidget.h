@@ -641,7 +641,7 @@ public:
     /*temp action*/
     void setActionTag(int tag);
 	int getActionTag();
-protected:
+public:
     //call back function called when size changed.
     virtual void onSizeChanged();
     
@@ -677,7 +677,7 @@ protected:
     virtual void copySpecialProperties(Widget* model);
     virtual void copyClonedWidgetChildren(Widget* model);
     Widget* getWidgetParent();
-protected:
+public:
     bool _enabled;            ///< Highest control of widget
     bool _bright;             ///< is this widget bright
     bool _touchEnabled;       ///< is this widget touch endabled

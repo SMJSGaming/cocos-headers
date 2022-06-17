@@ -50,7 +50,7 @@ public:
 	GenericValue() : flags_(kNullFlag) {}
 
 	//! Copy constructor is not permitted.
-private:
+public:
 	GenericValue(const GenericValue& rhs);
 
 public:
@@ -528,7 +528,7 @@ int z = a[0u].GetInt();				// This works too.
 		return *this;
 	}
 
-private:
+public:
 	template <typename, typename>
 	friend class GenericDocument;
 
@@ -760,7 +760,7 @@ public:
 	//! Get the capacity of stack in bytes.
 	size_t GetStackCapacity() const { return stack_.GetCapacity(); }
 
-private:
+public:
 	// Prohibit assignment
 	GenericDocument& operator=(const GenericDocument&);
 

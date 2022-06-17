@@ -11,7 +11,7 @@ NS_CC_EXT_BEGIN
  */
 class CCBKeyframe : public CCObject
 {
-private:
+public:
     CCObject *mValue;
     float mTime;
     int mEasingType;

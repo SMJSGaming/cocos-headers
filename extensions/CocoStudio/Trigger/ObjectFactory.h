@@ -70,7 +70,7 @@ public:
     WidgetReaderProtocol* createWidgetReaderProtocol(std::string name);
     void registerType(const TInfo &t);
     void removeAll();
-private:
+public:
     static ObjectFactory *_sharedFactory;
     FactoryMap _typeMap;
 };

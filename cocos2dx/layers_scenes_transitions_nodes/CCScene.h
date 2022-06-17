@@ -69,7 +69,7 @@ public:
 
         int getHighestChildZ(void);
 
-    protected:
+    public:
         void* m_pIDK;
     )
 };

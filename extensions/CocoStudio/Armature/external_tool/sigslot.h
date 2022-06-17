@@ -169,7 +169,7 @@ namespace sigslot {
 			LeaveCriticalSection(get_critsec());
 		}
         
-	private:
+	public:
 		CRITICAL_SECTION* get_critsec()
 		{
 			static CRITICAL_SECTION g_critsec;
@@ -205,7 +205,7 @@ namespace sigslot {
 			LeaveCriticalSection(&m_critsec);
 		}
         
-	private:
+	public:
 		CRITICAL_SECTION m_critsec;
 	};
 #endif // _SIGSLOT_HAS_WIN32_THREADS
@@ -240,7 +240,7 @@ namespace sigslot {
 			pthread_mutex_unlock(get_mutex());
 		}
         
-	private:
+	public:
 		pthread_mutex_t* get_mutex()
 		{
 			static pthread_mutex_t g_mutex;
@@ -276,7 +276,7 @@ namespace sigslot {
 			pthread_mutex_unlock(&m_mutex);
 		}
         
-	private:
+	public:
 		pthread_mutex_t m_mutex;
 	};
 #endif // _SIGSLOT_HAS_POSIX_THREADS
@@ -419,7 +419,7 @@ namespace sigslot {
 	template<class mt_policy = SIGSLOT_DEFAULT_MT_POLICY>
 	class has_slots : public mt_policy
 	{
-	private:
+	public:
 		typedef std::set<_signal_base<mt_policy> *> sender_set;
 		typedef typename sender_set::const_iterator const_iterator;
         
@@ -476,7 +476,7 @@ namespace sigslot {
 			m_senders.erase(m_senders.begin(), m_senders.end());
 		}
         
-	private:
+	public:
 		sender_set m_senders;
 	};
     
@@ -587,7 +587,7 @@ namespace sigslot {
 			}
 		}
         
-	protected:
+	public:
 		connections_list m_connected_slots;
 	};
     
@@ -699,7 +699,7 @@ namespace sigslot {
 		}
         
         
-	protected:
+	public:
 		connections_list m_connected_slots;
 	};
     
@@ -811,7 +811,7 @@ namespace sigslot {
 			}
 		}
         
-	protected:
+	public:
 		connections_list m_connected_slots;
 	};
     
@@ -923,7 +923,7 @@ namespace sigslot {
 			}
 		}
         
-	protected:
+	public:
 		connections_list m_connected_slots;
 	};
     
@@ -1035,7 +1035,7 @@ namespace sigslot {
 			}
 		}
         
-	protected:
+	public:
 		connections_list m_connected_slots;
 	};
     
@@ -1149,7 +1149,7 @@ namespace sigslot {
 			}
 		}
         
-	protected:
+	public:
 		connections_list m_connected_slots;
 	};
     
@@ -1263,7 +1263,7 @@ namespace sigslot {
 			}
 		}
         
-	protected:
+	public:
 		connections_list m_connected_slots;
 	};
     
@@ -1377,7 +1377,7 @@ namespace sigslot {
 			}
 		}
         
-	protected:
+	public:
 		connections_list m_connected_slots;
 	};
     
@@ -1492,7 +1492,7 @@ namespace sigslot {
 			}
 		}
         
-	protected:
+	public:
 		connections_list m_connected_slots;
 	};
     
@@ -1533,7 +1533,7 @@ namespace sigslot {
 			return m_pobject;
 		}
         
-	private:
+	public:
 		dest_type* m_pobject;
 		void (dest_type::* m_pmemfun)();
 	};
@@ -1574,7 +1574,7 @@ namespace sigslot {
 			return m_pobject;
 		}
         
-	private:
+	public:
 		dest_type* m_pobject;
 		void (dest_type::* m_pmemfun)(arg1_type);
 	};
@@ -1616,7 +1616,7 @@ namespace sigslot {
 			return m_pobject;
 		}
         
-	private:
+	public:
 		dest_type* m_pobject;
 		void (dest_type::* m_pmemfun)(arg1_type, arg2_type);
 	};
@@ -1658,7 +1658,7 @@ namespace sigslot {
 			return m_pobject;
 		}
         
-	private:
+	public:
 		dest_type* m_pobject;
 		void (dest_type::* m_pmemfun)(arg1_type, arg2_type, arg3_type);
 	};
@@ -1703,7 +1703,7 @@ namespace sigslot {
 			return m_pobject;
 		}
         
-	private:
+	public:
 		dest_type* m_pobject;
 		void (dest_type::* m_pmemfun)(arg1_type, arg2_type, arg3_type,
                                       arg4_type);
@@ -1753,7 +1753,7 @@ namespace sigslot {
 			return m_pobject;
 		}
         
-	private:
+	public:
 		dest_type* m_pobject;
 		void (dest_type::* m_pmemfun)(arg1_type, arg2_type, arg3_type, arg4_type,
                                       arg5_type);
@@ -1803,7 +1803,7 @@ namespace sigslot {
 			return m_pobject;
 		}
         
-	private:
+	public:
 		dest_type* m_pobject;
 		void (dest_type::* m_pmemfun)(arg1_type, arg2_type, arg3_type, arg4_type,
                                       arg5_type, arg6_type);
@@ -1853,7 +1853,7 @@ namespace sigslot {
 			return m_pobject;
 		}
         
-	private:
+	public:
 		dest_type* m_pobject;
 		void (dest_type::* m_pmemfun)(arg1_type, arg2_type, arg3_type, arg4_type,
                                       arg5_type, arg6_type, arg7_type);
@@ -1905,7 +1905,7 @@ namespace sigslot {
 			return m_pobject;
 		}
         
-	private:
+	public:
 		dest_type* m_pobject;
 		void (dest_type::* m_pmemfun)(arg1_type, arg2_type, arg3_type, arg4_type,
                                       arg5_type, arg6_type, arg7_type, arg8_type);

@@ -90,7 +90,7 @@ public:
     LayoutParameter* clone();
     virtual LayoutParameter* createCloneInstance();
     virtual void copyProperties(LayoutParameter* model);
-protected:
+public:
     Margin _margin;
     LayoutParameterType _layoutParameterType;
 };
@@ -136,7 +136,7 @@ public:
     LinearGravity getGravity() const;
     virtual LayoutParameter* createCloneInstance();
     virtual void copyProperties(LayoutParameter* model);
-protected:
+public:
     LinearGravity _linearGravity;
 };
 /**
@@ -211,7 +211,7 @@ public:
     
     virtual LayoutParameter* createCloneInstance();
     virtual void copyProperties(LayoutParameter* model);
-protected:
+public:
     RelativeAlign _relativeAlign;
     std::string _relativeWidgetName;
     std::string _relativeLayoutName;

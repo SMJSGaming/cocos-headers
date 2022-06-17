@@ -156,7 +156,7 @@ public:
 	 * @return   that if the action is done once time
      */
 	virtual bool isActionDoneOnce();
-protected:
+public:
 	int currentFrameIndex;
 	int destFrameIndex;
 	
@@ -169,7 +169,7 @@ protected:
 	CCArray* m_FrameArray;
 	int frameArrayNum;
 
-protected:
+public:
 	virtual CCNode* getActionNode();
 	virtual CCSpawn * refreshActionProperty();
 	virtual void runAction();

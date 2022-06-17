@@ -77,7 +77,7 @@ public:
     void dispatchKeyboardWillHide(CCIMEKeyboardNotificationInfo& info);
     void dispatchKeyboardDidHide(CCIMEKeyboardNotificationInfo& info);
 
-protected:
+public:
     friend class CCIMEDelegate;
 
     /**
@@ -98,7 +98,7 @@ protected:
     */
     void removeDelegate(CCIMEDelegate * pDelegate);
 
-private:
+public:
     CCIMEDispatcher();
     
     class Impl;

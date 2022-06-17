@@ -122,7 +122,7 @@ public:
 	static CCContourData *decodeContour(const rapidjson::Value &json);
 
 	static void decodeNode(CCBaseData *node, const rapidjson::Value &json, DataInfo *dataInfo);
-private:
+public:
     static std::vector<std::string> s_arrConfigFileList;
 
     static CCDataReaderHelper *s_DataReaderHelper;

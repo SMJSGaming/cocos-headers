@@ -136,7 +136,7 @@ public:
      */
     virtual void acceptVisitor(CCDataVisitor &visitor);
 
-private:
+public:
 
     /** only for internal use */
     bool initWithFormatAndValist(const char* format, va_list ap);

@@ -80,7 +80,7 @@ typedef enum {
 class CC_DLL CCTransitionScene : public CCScene
 {
 
-protected:
+public:
     CCScene    * m_pInScene;
     CCScene    * m_pOutScene;
     float    m_fDuration;
@@ -122,9 +122,9 @@ public:
     /** used by some transitions to hide the outer scene */
     void hideOutShowIn(void);
 
-protected:
+public:
     virtual void sceneOrder();
-private:
+public:
     void setNewScene(float dt);
 
 };
@@ -134,7 +134,7 @@ private:
 */
 class CC_DLL CCTransitionSceneOriented : public CCTransitionScene
 {
-protected:
+public:
     tOrientation m_eOrientation;
 
 public:
@@ -322,7 +322,7 @@ public:
     virtual CCActionInterval* easeActionWithAction(CCActionInterval * action);
 
     static CCTransitionSlideInL* create(float t, CCScene* scene);
-protected:
+public:
     virtual void sceneOrder();
 };
 
@@ -348,7 +348,7 @@ public:
     virtual CCActionInterval* action(void);
 
     static CCTransitionSlideInR* create(float t, CCScene* scene);
-protected:
+public:
     virtual void sceneOrder();
 };
 
@@ -374,7 +374,7 @@ public:
     virtual CCActionInterval* action(void);
 
     static CCTransitionSlideInB* create(float t, CCScene* scene);
-protected: 
+public: 
     virtual void sceneOrder();
 };
 
@@ -400,7 +400,7 @@ public:
     virtual CCActionInterval* action(void);
 
     static CCTransitionSlideInT* create(float t, CCScene* scene);
-protected:
+public:
     virtual void sceneOrder();
 };
 
@@ -590,7 +590,7 @@ Fade out the outgoing scene and then fade in the incoming scene.'''
 */
 class CC_DLL CCTransitionFade : public CCTransitionScene
 {
-protected:
+public:
     ccColor4B    m_tColor;
 
 public:
@@ -684,7 +684,7 @@ public :
 
 public:
     static CCTransitionTurnOffTiles* create(float t, CCScene* scene);
-protected:
+public:
     virtual void sceneOrder();
 };
 
@@ -766,7 +766,7 @@ public:
 public:
 
     static CCTransitionFadeTR* create(float t, CCScene* scene);
-protected:
+public:
     virtual void sceneOrder();
 };
 

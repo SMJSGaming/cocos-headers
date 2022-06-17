@@ -70,7 +70,7 @@ public:
      * Returns the "class name" of widget.
      */
     virtual std::string getDescription() const;
-protected:
+public:
     virtual void initRenderer();
     virtual void onSizeChanged();
     virtual void updateTextureColor();
@@ -79,7 +79,7 @@ protected:
     void labelBMFontScaleChangedWithSize();
     virtual Widget* createCloneInstance();
     virtual void copySpecialProperties(Widget* model);
-protected:
+public:
     cocos2d::CCLabelBMFont* _labelBMFontRenderer;
     bool _fntFileHasInit;
     std::string _fntFileName;

@@ -178,7 +178,7 @@ public:
 
     inline const char* getLayerName(){ return m_sLayerName.c_str(); }
     inline void setLayerName(const char *layerName){ m_sLayerName = layerName; }
-private:
+public:
     CCPoint positionForIsoAt(const CCPoint& pos);
     CCPoint positionForOrthoAt(const CCPoint& pos);
     CCPoint positionForHexAt(const CCPoint& pos);
@@ -199,7 +199,7 @@ private:
     // index
     unsigned int atlasIndexForExistantZ(unsigned int z);
     unsigned int atlasIndexForNewZ(int z);
-protected:
+public:
     //! name of the layer
     std::string m_sLayerName;
     //! TMX Layer supports opacity

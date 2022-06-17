@@ -89,13 +89,13 @@ public:
     void setTile(const ccColor3B& tile, const CCPoint& position);
     /** dealloc the map from memory */
     void releaseMap();
-private:
+public:
     void loadTGAfile(const char *file);
     void calculateItemsToRender();
     void updateAtlasValueAt(const CCPoint& pos, const ccColor3B& value, unsigned int index);
     void updateAtlasValues();
 
-protected:
+public:
     //! x,y to atlas dictionary
     CCDictionary* m_pPosToAtlasIndex;
     //! numbers of tiles to render

@@ -146,7 +146,7 @@ public:
      */
     void set2DProjection(void);
 
-protected:
+public:
     bool m_bActive;
     int  m_nReuseGrid;
     CCSize m_sGridSize;
@@ -189,7 +189,7 @@ public:
     /** create one Grid */
     static CCGrid3D* create(const CCSize& gridSize);
     
-protected:
+public:
     GLvoid *m_pTexCoordinates;
     GLvoid *m_pVertices;
     GLvoid *m_pOriginalVertices;
@@ -229,7 +229,7 @@ public:
     /** create one Grid */
     static CCTiledGrid3D* create(const CCSize& gridSize);
     
-protected:
+public:
     GLvoid *m_pTexCoordinates;
     GLvoid *m_pVertices;
     GLvoid *m_pOriginalVertices;

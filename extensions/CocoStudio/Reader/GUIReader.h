@@ -72,7 +72,7 @@ public:
                                  ObjectFactory::Instance ins,
                                  CCObject* object,
                                  SEL_ParseEvent callBack);
-protected:
+public:
     std::string m_strFilePath;
     CCDictionary* _fileDesignSizes;
     
@@ -97,7 +97,7 @@ public:
                                                               cocos2d::ui::Widget* widget,
                                                               const rapidjson::Value& customOptions) = 0;
     
-protected:
+public:
     std::string m_strFilePath;
 };
 

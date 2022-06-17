@@ -49,7 +49,7 @@ public:
 
     virtual bool init();
 
-protected:
+public:
 
     CC_SYNTHESIZE_RETAIN(CCNode *, m_pDisplay, Display);
     CC_SYNTHESIZE_RETAIN(CCDisplayData *, m_pDisplayData, DisplayData);

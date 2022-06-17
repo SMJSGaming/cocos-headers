@@ -45,7 +45,7 @@ NS_CC_EXT_BEGIN
 class CCControlSlider: public CCControl
 {
     //maunally put in the setters
-    /** Contains the receiver¡¯s current value. */
+    /** Contains the receiverï¿½ï¿½s current value. */
     CC_SYNTHESIZE_READONLY(float, m_value, Value);
     virtual void setValue(float val);
     /** Contains the minimum value of the receiver. 
@@ -97,7 +97,7 @@ public:
     static CCControlSlider* create(CCSprite * backgroundSprite, CCSprite* pogressSprite, CCSprite* thumbSprite);
 
     virtual void needsLayout();
-protected:
+public:
     void sliderBegan(CCPoint location);
     void sliderMoved(CCPoint location);
     void sliderEnded(CCPoint location);

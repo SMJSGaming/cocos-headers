@@ -57,7 +57,7 @@ class CCSprite;
  */
 class CC_DLL CCSpriteFrameCache : public CCObject
 {
-protected:
+public:
     // MARMALADE: Made this protected not private, as deriving from this class is pretty useful
     /**
      * @js ctor
@@ -71,7 +71,7 @@ public:
      */
     ~CCSpriteFrameCache(void);
 
-private:
+public:
     /*Adds multiple Sprite Frames with a dictionary. The texture will be associated with the created sprite frames.
      */
     void addSpriteFramesWithDictionary(CCDictionary* pobDictionary, CCTexture2D *pobTexture);
@@ -125,7 +125,7 @@ public:
     */
     void removeSpriteFramesFromFile(const char* plist);
 
-private:
+public:
     /** Removes multiple Sprite Frames from CCDictionary.
     * @since v0.99.5
     */
@@ -153,10 +153,10 @@ public:
     /** Purges the cache. It releases all the Sprite Frames and the retained instance. */
     static void purgeSharedSpriteFrameCache(void);
 
-private:
+public:
     // MARMALADE: Made this protected not private, as deriving from this class is pretty useful
 //    CCSpriteFrameCache(void) : m_pSpriteFrames(NULL), m_pSpriteFramesAliases(NULL){}
-protected:
+public:
     CCDictionary* m_pSpriteFrames;
     CCDictionary* m_pSpriteFramesAliases;
     std::set<std::string>*  m_pLoadedFileNames;

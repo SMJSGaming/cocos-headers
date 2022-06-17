@@ -144,7 +144,7 @@ public:
     friend void* assetsManagerDownloadAndUncompress(void*);
     friend int assetsManagerProgressFunc(void *, double, double, double, double);
     
-protected:
+public:
     bool downLoad();
     void checkStoragePath();
     bool uncompress();
@@ -152,7 +152,7 @@ protected:
     void setSearchPath();
     void sendErrorMessage(ErrorCode code);
     
-private:
+public:
     typedef struct _Message
     {
     public:
@@ -170,14 +170,14 @@ private:
         virtual void update(float dt);
         void sendMessage(Message *msg);
         
-    private:
+    public:
         void handleUpdateSucceed(Message *msg);
         
         std::list<Message*> *_messageQueue;
         pthread_mutex_t _messageQueueMutex;
     };
     
-private:
+public:
     //! The path to store downloaded resources.
     std::string _storagePath;
     

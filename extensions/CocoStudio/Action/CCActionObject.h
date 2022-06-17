@@ -163,7 +163,7 @@ public:
 
 	void simulationActionUpdate(float dt);
 
-protected:
+public:
 	CCArray* m_ActionNodeList;/*actionnode*/
 	std::string m_name;
 	bool m_loop;

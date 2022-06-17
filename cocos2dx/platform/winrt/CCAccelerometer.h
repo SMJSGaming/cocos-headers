@@ -38,7 +38,7 @@ public:
 
     void setDelegate(CCAccelerometerDelegate* pDelegate);
     void setAccelerometerInterval(float interval);
-private:
+public:
     CCAcceleration m_obAccelerationValue;
     CCAccelerometerDelegate* m_pAccelDelegate;
 	Windows::Devices::Sensors::Accelerometer^ m_accelerometer;

@@ -236,7 +236,7 @@ public:
      * @param A user assigned CCObject
      */
     virtual void setUserObject(CCObject *pUserObject);
-protected:
+public:
 
     /**
      * Update(float dt) will call this handler, you can handle your logic here
@@ -266,7 +266,7 @@ protected:
     inline bool isIgnoreFrameEvent() { return m_bIgnoreFrameEvent; }
 
     friend class CCTween;
-protected:
+public:
     //! CCAnimationData save all MovementDatas this animation used.
     CC_SYNTHESIZE_RETAIN(CCAnimationData *, m_pAnimationData, AnimationData);
 
@@ -296,7 +296,7 @@ protected:
 	int m_iMovementListDurationTo;
 
     CCObject *m_pUserObject;
-protected:
+public:
     /**
      * MovementEvent CallFunc.
      * @param CCArmature* a CCArmature

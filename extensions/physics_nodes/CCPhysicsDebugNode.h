@@ -46,7 +46,7 @@ NS_CC_EXT_BEGIN
 
 class CCPhysicsDebugNode : public CCDrawNode
 {
-protected:
+public:
     cpSpace *m_pSpacePtr;
     
 public:

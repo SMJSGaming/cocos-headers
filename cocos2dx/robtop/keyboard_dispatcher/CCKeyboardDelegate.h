@@ -223,7 +223,7 @@ RT_ADD(
 
 		void setDelegate(CCKeyboardDelegate* pDelegate);
 
-	protected:
+	public:
 		CCKeyboardDelegate* m_pDelegate;
 	};
 

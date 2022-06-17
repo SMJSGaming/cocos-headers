@@ -78,7 +78,7 @@ public:
     /** Sets the bottom side inset */
     CC_PROPERTY(float, m_insetBottom, InsetBottom);
 
-protected:
+public:
     bool m_bSpritesGenerated;
     CCRect m_spriteRect;
     bool   m_bSpriteFrameRotated;

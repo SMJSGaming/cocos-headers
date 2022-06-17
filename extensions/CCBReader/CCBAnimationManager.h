@@ -21,7 +21,7 @@ public:
 
 class CCBAnimationManager : public CCObject
 {
-private:
+public:
     CCArray *mSequences;
     CCDictionary *mNodeSequences;
     CCDictionary *mBaseValues;
@@ -132,7 +132,7 @@ public:
     CCObject* actionForCallbackChannel(CCBSequenceProperty* channel);
     CCObject* actionForSoundChannel(CCBSequenceProperty* channel);
     
-private:
+public:
     CCObject* getBaseValue(CCNode *pNode, const char* pPropName);
     int getSequenceId(const char* pSequenceName);
     CCBSequence* getSequence(int nSequenceId);
@@ -149,7 +149,7 @@ private:
  */
 class CCBSetSpriteFrame : public CCActionInstant
 {
-private:
+public:
     CCSpriteFrame *mSpriteFrame;
     
 public:
@@ -169,7 +169,7 @@ public:
  */
 class CCBSoundEffect : public CCActionInstant
 {
-private:
+public:
   std::string mSoundFile;
   float mPitch, mPan, mGain;
     
@@ -188,7 +188,7 @@ public:
  */
 class CCBRotateTo : public CCActionInterval
 {
-private:
+public:
     float mStartAngle;
     float mDstAngle;
     float mDiffAngle;
@@ -206,7 +206,7 @@ public:
  *  @lua NA
  */
 class CCBRotateXTo: public CCActionInterval {
-private:
+public:
     float mStartAngle;
     float mDstAngle;
     float mDiffAngle;
@@ -223,7 +223,7 @@ public:
  *  @lua NA
  */
 class CCBRotateYTo: public CCActionInterval {
-private:
+public:
     float mStartAngle;
     float mDstAngle;
     float mDiffAngle;

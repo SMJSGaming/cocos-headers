@@ -66,7 +66,7 @@ typedef unsigned int CCControlEvent;
 /** The possible state for a control.  */
 enum 
 {
-    CCControlStateNormal       = 1 << 0, // The normal, or default state of a control¡ªthat is, enabled but neither selected nor highlighted.
+    CCControlStateNormal       = 1 << 0, // The normal, or default state of a controlï¿½ï¿½that is, enabled but neither selected nor highlighted.
     CCControlStateHighlighted  = 1 << 1, // Highlighted state of a control. A control enters this state when a touch down, drag inside or drag enter is performed. You can retrieve and set this value through the highlighted property.
     CCControlStateDisabled     = 1 << 2, // Disabled state of a control. This state indicates that the control is currently disabled. You can retrieve and set this value through the enabled property.
     CCControlStateSelected     = 1 << 3  // Selected state of a control. This state indicates that the control is currently selected. You can retrieve and set this value through the selected property.
@@ -95,7 +95,7 @@ class CCControl : public CCLayerRGBA
     CC_SYNTHESIZE_READONLY(CCControlState, m_eState, State);
 
     /** True if all of the controls parents are visible */
-protected:
+public:
     bool m_hasVisibleParents;
 
 public:
@@ -117,7 +117,7 @@ public:
     virtual bool isOpacityModifyRGB();
     virtual void setOpacityModifyRGB(bool bOpacityModifyRGB);
 
-protected:
+public:
     bool m_bEnabled;
     bool m_bSelected;
     bool m_bHighlighted;
@@ -180,7 +180,7 @@ public:
     * Removes a target and action for a particular event (or events) from an 
     * internal dispatch table.
     *
-    * @param target The target object—that is, the object to which the action 
+    * @param target The target objectï¿½that is, the object to which the action 
     * message is sent. Pass nil to remove all targets paired with action and the
     * specified control events.
     * @param action A selector identifying an action message. Pass NULL to remove
@@ -204,12 +204,12 @@ public:
     *
     * @param touch A CCTouch object that represents a touch.
     *
-    * @return YES whether a touch is inside the receiver¡¯s rect.
+    * @return YES whether a touch is inside the receiverï¿½ï¿½s rect.
     */
     virtual bool isTouchInside(CCTouch * touch);
 
 
-protected:
+public:
     /**
      * Returns an CCInvocation object able to construct messages using a given 
      * target-action pair. (The invocation may optionnaly include the sender and
@@ -245,7 +245,7 @@ protected:
      * parameters, in that order.
      * When you call this method, target is not retained.
      *
-     * @param target The target object¡ªthat is, the object to which the action 
+     * @param target The target objectï¿½ï¿½that is, the object to which the action 
      * message is sent. It cannot be nil. The target is not retained.
      * @param action A selector identifying an action message. It cannot be NULL.
      * @param controlEvent A control event for which the action message is sent.
@@ -257,7 +257,7 @@ protected:
      * Removes a target and action for a particular event from an internal dispatch
      * table.
      *
-     * @param target The target object¡ªthat is, the object to which the action 
+     * @param target The target objectï¿½ï¿½that is, the object to which the action 
      * message is sent. Pass nil to remove all targets paired with action and the
      * specified control events.
      * @param action A selector identifying an action message. Pass NULL to remove
@@ -277,9 +277,9 @@ public:
      *  @js NA
      */
     void removeHandleOfControlEvent(CCControlEvent controlEvent);
-private:
+public:
     int  getHandleOfControlEvent(CCControlEvent controlEvent);
-private:
+public:
     std::map<int,int> m_mapHandleOfControlEvent;
 };
 

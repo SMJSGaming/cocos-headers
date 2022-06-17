@@ -67,7 +67,7 @@ public:
 	size_t GetSize() const { return stack_top_ - stack_; }
 	size_t GetCapacity() const { return stack_capacity_; }
 
-private:
+public:
 	Allocator* allocator_;
 	Allocator* own_allocator_;
 	char *stack_;

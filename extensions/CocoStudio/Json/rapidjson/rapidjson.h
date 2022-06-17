@@ -274,7 +274,7 @@ public:
 	//! Frees a memory block (concept Allocator)
 	static void Free(void *) {} // Do nothing
 
-private:
+public:
 	//! Creates a new chunk.
 	/*! \param capacity Capacity of the chunk in bytes.
 	*/

@@ -51,7 +51,7 @@ public:
 	/** creates the action */
 	static CCEaseBezierAction* create(CCActionInterval* pAction);
 
-private:
+public:
 	float m_p0;
 	float m_p1;
 	float m_p2;

@@ -101,7 +101,7 @@ public:
      *  @return The observer script handle.
      */
     int getObserverHandlerByName(const char* name);
-private:
+public:
     // internal functions
 
     // Check whether the observer exists by the specified target and name.
@@ -136,7 +136,7 @@ public:
     
     /** Invokes the callback function of this observer */
     void performSelector(CCObject *obj);
-private:
+public:
     CC_PROPERTY_READONLY(CCObject *, m_target, Target);
     CC_PROPERTY_READONLY(SEL_CallFuncO, m_selector, Selector);
     CC_PROPERTY_READONLY(char *, m_name, Name);

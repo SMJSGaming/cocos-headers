@@ -175,7 +175,7 @@ public:
     void requestRefreshView();
     
     void refreshView();
-protected:
+public:
     virtual void addChild(CCNode* child) {ScrollView::addChild(child);};
     virtual void addChild(CCNode * child, int zOrder) {ScrollView::addChild(child, zOrder);};
     virtual void addChild(CCNode* child, int zOrder, int tag) {ScrollView::addChild(child, zOrder, tag);};
@@ -197,7 +197,7 @@ protected:
     virtual void copyClonedWidgetChildren(Widget* model);
     void selectedItemEvent(int state);
     virtual void interceptTouchEvent(int handleState,Widget* sender,const CCPoint &touchPoint);
-protected:
+public:
     
     Widget* _model;
     ListViewGravity _gravity;

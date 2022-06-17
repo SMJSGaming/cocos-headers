@@ -16,7 +16,7 @@ class CCMenuLoader : public CCLayerLoader {
         virtual ~CCMenuLoader() {};
         CCB_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(CCMenuLoader, loader);
 
-    protected:
+    public:
         CCB_VIRTUAL_NEW_AUTORELEASE_CREATECCNODE_METHOD(CCMenu);
 };
 

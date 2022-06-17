@@ -99,7 +99,7 @@ public:
 	*/
 	void releaseActions();
 
-protected:
+public:
 	CCDictionary* m_pActionDic;
 };
 
