@@ -62,7 +62,7 @@ class CCDictionary;
  */
 class CC_DLL CCDictElement
 {
-private:
+public:
     /**
      *  Constructor of CCDictElement. It's only for internal usage. CCDictionary is its friend class.
      *  
@@ -79,7 +79,6 @@ private:
      */
     CCDictElement(intptr_t iKey, CCObject* pObject);
     
-public:
     /**
      *  The destructor of CCDictElement.
      */
